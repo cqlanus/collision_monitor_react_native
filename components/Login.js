@@ -23,7 +23,7 @@ export default class Login extends Component {
   }
 
   dummyPress() {
-
+    this.props.navigate('DrawerOpen');
   }
 
   requestLogin = async () => {
