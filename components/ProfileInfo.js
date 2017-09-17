@@ -1,8 +1,5 @@
-import React, { Component } from 'react';
-import { StyleSheet, Text, View, TextInput, ScrollView } from 'react-native';
-import Container from './Container';
-import Button from './Button';
-import Label from './Label';
+import React from 'react';
+import { StyleSheet, View, Text } from 'react-native';
 
 const ProfileInfo = props => (
   <View style={props.styles}>
@@ -12,7 +9,7 @@ const ProfileInfo = props => (
       <Text style={{fontSize: 30, color: 'white'}}>{props.numObservations} Observations</Text>
     </View>
   </View>
-)
+);
 
 export default ProfileInfo;
 

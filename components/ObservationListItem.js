@@ -1,6 +1,5 @@
-import React, { Component } from 'react';
-import { StyleSheet, Text, View, TextInput, ScrollView } from 'react-native';
-import Container from './Container';
+import React from 'react';
+import { StyleSheet, View, Text } from 'react-native';
 
 const ObservationListItem = props => (
   <View style={styles.flex}>
@@ -10,7 +9,7 @@ const ObservationListItem = props => (
       <Text style={styles.location}>{props.observation.place.name}</Text>
     </View>
   </View>
-)
+);
 
 export default ObservationListItem;
 
@@ -40,4 +39,4 @@ const styles = StyleSheet.create({
     fontSize: 17,
     color: '#999'
   }
-})
+});

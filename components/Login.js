@@ -15,7 +15,7 @@ export default class Login extends Component {
     this.state = {
       email: '',
       password: ''
-    }
+    };
   }
 
   press() {
@@ -28,22 +28,22 @@ export default class Login extends Component {
 
   requestLogin = async () => {
     try {
-      let response = await axios.post('http://192.168.1.67:8000/auth/login', this.state)
+      let response = await axios.post('http://192.168.1.67:8000/auth/login', this.state);
       let result = await response.data;
       console.log('result is:', result);
-    } catch(err) { console.error(err)}
+    } catch(err) { console.error(err); }
   }
 
   handleChangeEmail(text) {
     this.setState({
       email: text.toLowerCase()
-    })
+    });
   }
 
   handleChangePass(text) {
     this.setState({
       password: text
-    })
+    });
   }
 
   render() {
@@ -107,7 +107,7 @@ export default class Login extends Component {
         </View>
 
       </ScrollView>
-    )
+    );
   }
 
 }
@@ -162,4 +162,4 @@ const styles = StyleSheet.create({
   footer: {
     marginTop: 10
   }
-})
+});

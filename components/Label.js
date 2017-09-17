@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 import { StyleSheet, Text } from 'react-native';
 
 const Label = props => {
@@ -9,7 +9,7 @@ const Label = props => {
       {props.text}
     </Text>
   );
-}
+};
 
 const styles = StyleSheet.create({
   textLabel: {
