@@ -30,6 +30,6 @@ const stylesObj = StyleSheet.create({
 });
 
 ProfileInfo.propTypes = {
-  styles: PropTypes.object,
+  styles: View.propTypes.style,
   numObservations: PropTypes.number,
 };

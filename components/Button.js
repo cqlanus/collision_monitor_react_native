@@ -36,7 +36,7 @@ Button.propTypes = {
   noDefaultStyles: PropTypes.bool,
   styles: PropTypes.object,
   children: PropTypes.any,
-  label: PropTypes.string.isRequired
+  label: PropTypes.string
 };
 
 export default Button;

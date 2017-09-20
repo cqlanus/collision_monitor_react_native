@@ -71,7 +71,7 @@ export default class ProfilePage extends Component {
 const styles = StyleSheet.create({
   scroll: {
     backgroundColor: 'white',
-    paddingTop: 30,
+    paddingTop: 20,
   },
   profileInfo: {
     borderWidth: 1,

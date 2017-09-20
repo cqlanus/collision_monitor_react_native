@@ -20,5 +20,5 @@ export default ObservationList;
 
 ObservationList.propTypes = {
   observations: PropTypes.array,
-  styles: PropTypes.object,
+  styles: View.propTypes.style,
 };
