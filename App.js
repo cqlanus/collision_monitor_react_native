@@ -1,9 +1,9 @@
 import React from 'react';
-import { StyleSheet, Text, View, TextInput, Button } from 'react-native';
-import { StackNavigator, TabNavigator, DrawerNavigator } from 'react-navigation';
+import { StyleSheet, View } from 'react-native';
+import { TabNavigator } from 'react-navigation';
+import  PropTypes from 'prop-types';
 
 import Login from './components/Login';
-import ChatScreen from './components/NewScreen';
 import ProfileScreen from './components/ProfilePage';
 import MapScreen from './components/MapScreen';
 
@@ -14,7 +14,7 @@ class App extends React.Component {
   }
 
   render() {
-    const { navigate } = this.props.navigation;
+    const {navigate} = this.props.navigation;
     return (
       <View style={styles.container}>
         <Login style={styles.login } navigate={navigate}/>
@@ -22,6 +22,12 @@ class App extends React.Component {
     );
   }
 }
+
+App.propTypes = {
+  navigation: PropTypes.shape({
+    navigate: PropTypes.func,
+  })
+};
 
 
 
@@ -33,7 +39,7 @@ const SimpleApp = TabNavigator({
   tabBarOptions: {
     activeTintColor: '#e91e63',
   }
-})
+});
 
 const styles = StyleSheet.create({
   container: {

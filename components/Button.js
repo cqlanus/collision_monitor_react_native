@@ -1,5 +1,6 @@
 import React from 'react';
-import { StyleSheet, TouchableHighlight } from 'react-native';
+import { StyleSheet, TouchableHighlight, Text } from 'react-native';
+import PropTypes from 'prop-types';
 
 const Button = props => {
   function getContent() {
@@ -29,5 +30,13 @@ const styles = StyleSheet.create({
     padding: 20
   },
 });
+
+Button.propTypes = {
+  onPress: PropTypes.func.isRequired,
+  noDefaultStyles: PropTypes.bool,
+  styles: PropTypes.object,
+  children: PropTypes.any,
+  label: PropTypes.string.isRequired
+};
 
 export default Button;

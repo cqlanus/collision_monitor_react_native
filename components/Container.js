@@ -1,5 +1,6 @@
 import React from 'react';
 import { View } from 'react-native';
+import PropTypes from 'prop-types';
 
 import { StyleSheet } from 'react-native';
 
@@ -18,3 +19,7 @@ const styles = StyleSheet.create({
 });
 
 export default Container;
+
+Container.propTypes = {
+  children: PropTypes.any,
+};

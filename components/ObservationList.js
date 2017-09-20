@@ -1,6 +1,7 @@
 import React from 'react';
 import { View } from 'react-native';
 import ObservationListItem from './ObservationListItem';
+import PropTypes from 'prop-types';
 
 const ObservationList = props => (
   <View style={props.styles}>
@@ -16,3 +17,8 @@ const ObservationList = props => (
 );
 
 export default ObservationList;
+
+ObservationList.propTypes = {
+  observations: PropTypes.array,
+  styles: PropTypes.object,
+};

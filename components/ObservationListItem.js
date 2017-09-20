@@ -1,5 +1,6 @@
 import React from 'react';
 import { StyleSheet, View, Text } from 'react-native';
+import PropTypes from 'prop-types';
 
 const ObservationListItem = props => (
   <View style={styles.flex}>
@@ -40,3 +41,16 @@ const styles = StyleSheet.create({
     color: '#999'
   }
 });
+
+ObservationListItem.propTypes = {
+  observation: PropTypes.shape({
+    collision: PropTypes.shape({
+      species: PropTypes.shape({
+        name: PropTypes.string
+      })
+    }),
+    place: PropTypes.shape({
+      name: PropTypes.string
+    })
+  }),
+}

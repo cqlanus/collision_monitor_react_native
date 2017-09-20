@@ -8,8 +8,10 @@ import Label from './Label';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
 import axios from 'axios';
+import PropTypes from 'prop-types';
 
 export default class Login extends Component {
+
   constructor() {
     super();
     this.state = {
@@ -163,3 +165,7 @@ const styles = StyleSheet.create({
     marginTop: 10
   }
 });
+
+Login.propTypes = {
+  navigate: PropTypes.func,
+};
