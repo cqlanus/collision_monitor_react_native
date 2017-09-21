@@ -3,10 +3,15 @@ import { StyleSheet, View, Text } from 'react-native';
 import PropTypes from 'prop-types';
 
 const ObservationListItem = props => (
-  <View style={styles.flex}>
+  <View
+    style={styles.flex}
+  >
     <View style={styles.thumbnail}></View>
     <View style={styles.details}>
-      <Text style={styles.species}>{props.observation.collision.species.name}</Text>
+      <Text
+        style={styles.species}
+        onPress={() => props.goTo(props.observation.collision.species)}
+      >{props.observation.collision.species.name}</Text>
       <Text style={styles.location}>{props.observation.place.name}</Text>
     </View>
   </View>

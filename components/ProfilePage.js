@@ -1,23 +1,23 @@
 import React, { Component } from 'react';
 import { StyleSheet, View, ScrollView } from 'react-native';
+import PropTypes from 'prop-types';
 
-import Container from './Container';
+// import Container from './Container';
 import ProfileInfo from './ProfileInfo';
 import ObservationList from './ObservationList';
-import Header from './Header';
+// import Header from './Header';
 
 import axios from 'axios';
 
 export default class ProfilePage extends Component {
-  static navigationOptions = {
-    tabBarLabel: 'Me',
-  }
+
   constructor() {
     super();
     this.state = {
       observations: [],
       me: {}
     };
+    this.goToObservationPage = this.goToObservationPage.bind(this);
   }
 
   componentDidMount() {
@@ -45,15 +45,15 @@ export default class ProfilePage extends Component {
       .catch(console.error);
   }
 
+  goToObservationPage(species) {
+    this.props.navigation.navigate('Observation', {...species});
+  }
+
 
   render() {
     return (
       <ScrollView style={styles.scroll}>
-        <Container>
-          <Header
-            styles={{container: styles.container, text: styles.text}}
-          >{this.state.me.firstName} {this.state.me.lastName}</Header>
-        </Container>
+
         <View>
           <ProfileInfo
             styles={styles.profileInfo}
@@ -61,7 +61,11 @@ export default class ProfilePage extends Component {
           ></ProfileInfo>
         </View>
         <View>
-          <ObservationList observations={this.state.observations} styles={styles.obsList}></ObservationList>
+          <ObservationList
+            observations={this.state.observations}
+            goTo={this.goToObservationPage}
+            styles={styles.obsList}
+          ></ObservationList>
         </View>
       </ScrollView>
     );
@@ -71,7 +75,7 @@ export default class ProfilePage extends Component {
 const styles = StyleSheet.create({
   scroll: {
     backgroundColor: 'white',
-    paddingTop: 20,
+    paddingTop: 0,
   },
   profileInfo: {
     borderWidth: 1,
@@ -99,3 +103,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   }
 });
+
+ProfilePage.propTypes = {
+  navigation: PropTypes.object,
+}

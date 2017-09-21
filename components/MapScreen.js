@@ -5,9 +5,6 @@ import Container from './Container';
 import Header from './Header';
 
 export default class MapScreen extends Component {
-  static navigationOptions = {
-    tabBarLabel: 'Map',
-  }
   constructor() {
     super();
   }

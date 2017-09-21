@@ -8,6 +8,7 @@ const ObservationList = props => (
     {
       props.observations && props.observations.map(observation => (
         <ObservationListItem
+          goTo={props.goTo}
           key={observation.id}
           observation={observation}
         ></ObservationListItem>
@@ -21,4 +22,5 @@ export default ObservationList;
 ObservationList.propTypes = {
   observations: PropTypes.array,
   styles: View.propTypes.style,
+  goTo: PropTypes.func,
 };
