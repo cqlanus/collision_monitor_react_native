@@ -4,11 +4,11 @@ import React from 'react';
 import { TabNavigator, StackNavigator } from 'react-navigation';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
-import Login from '../components/Login';
-import ProfileScreen from '../components/ProfilePage';
+import Login from '../components/LoginScreen';
+import ProfileScreen from '../components/ProfileScreen';
 import MapScreen from '../components/MapScreen';
 
-import ObservationPage from '../components/ObservationPage';
+import ObservationScreen from '../components/ObservationScreen';
 
 export const ProfileStack = StackNavigator({
   Profile: {
@@ -18,7 +18,7 @@ export const ProfileStack = StackNavigator({
     }
   },
   Observation: {
-    screen: ObservationPage,
+    screen: ObservationScreen,
     navigationOptions: ({navigation}) => ({
       title: `${navigation.state.params.name}`,
     })

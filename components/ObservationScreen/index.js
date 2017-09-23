@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
-import { ScrollView, Text, StyleSheet } from 'react-native';
+import { ScrollView, Text } from 'react-native';
 import PropTypes from 'prop-types';
+import styles from './style';
 
 class ObservationPage extends Component {
   constructor() {
@@ -18,15 +19,8 @@ class ObservationPage extends Component {
   }
 }
 
-const styles = StyleSheet.create({
-  scroll: {
-    backgroundColor: 'white',
-    paddingTop: 20,
-  },
-});
-
 ObservationPage.propTypes = {
   navigation: PropTypes.object,
-}
+};
 
 export default ObservationPage;

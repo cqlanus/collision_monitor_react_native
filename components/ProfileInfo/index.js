@@ -1,6 +1,7 @@
 import React from 'react';
-import { StyleSheet, View, Text } from 'react-native';
+import { View, Text } from 'react-native';
 import PropTypes from 'prop-types';
+import stylesObj from './style';
 
 const ProfileInfo = ({styles, numObservations}) => (
   <View style={styles}>
@@ -13,21 +14,6 @@ const ProfileInfo = ({styles, numObservations}) => (
 );
 
 export default ProfileInfo;
-
-const stylesObj = StyleSheet.create({
-  thumbnail: {
-    borderColor: '#fff',
-    borderRadius: 150,
-    borderWidth: 4,
-    height: 100,
-    width: 100,
-    backgroundColor: '#444'
-  },
-  observations: {
-    paddingLeft: 30,
-    justifyContent: 'center',
-  }
-});
 
 ProfileInfo.propTypes = {
   styles: View.propTypes.style,

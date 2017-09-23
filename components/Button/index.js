@@ -1,6 +1,7 @@
 import React from 'react';
-import { StyleSheet, TouchableHighlight, Text } from 'react-native';
+import { TouchableHighlight, Text } from 'react-native';
 import PropTypes from 'prop-types';
+import styles from './style';
 
 const Button = props => {
   function getContent() {
@@ -22,14 +23,6 @@ const Button = props => {
     </TouchableHighlight>
   );
 };
-
-const styles = StyleSheet.create({
-  button: {
-    alignItems: 'center',
-    justifyContent: 'center',
-    padding: 20
-  },
-});
 
 Button.propTypes = {
   onPress: PropTypes.func.isRequired,

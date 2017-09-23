@@ -1,6 +1,7 @@
 import React from 'react';
-import { StyleSheet, Text } from 'react-native';
+import { Text } from 'react-native';
 import PropTypes from 'prop-types';
+import styles from './style';
 
 const Label = props => {
   return (
@@ -11,16 +12,6 @@ const Label = props => {
     </Text>
   );
 };
-
-const styles = StyleSheet.create({
-  textLabel: {
-    fontSize: 20,
-    fontWeight: 'bold',
-    fontFamily: 'Verdana',
-    marginBottom: 10,
-    color: '#595856'
-  }
-});
 
 export default Label;
 

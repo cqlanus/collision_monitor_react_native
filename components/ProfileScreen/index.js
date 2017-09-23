@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { StyleSheet, View, ScrollView } from 'react-native';
+import { View, ScrollView } from 'react-native';
 import PropTypes from 'prop-types';
+import styles from './style';
 
 // import Container from './Container';
 import ProfileInfo from './ProfileInfo';
@@ -9,7 +10,7 @@ import ObservationList from './ObservationList';
 
 import axios from 'axios';
 
-export default class ProfilePage extends Component {
+export default class ProfileScreen extends Component {
 
   constructor() {
     super();
@@ -72,38 +73,6 @@ export default class ProfilePage extends Component {
   }
 }
 
-const styles = StyleSheet.create({
-  scroll: {
-    backgroundColor: 'white',
-    paddingTop: 0,
-  },
-  profileInfo: {
-    borderWidth: 1,
-    borderColor: '#aaa',
-    paddingVertical: 10,
-    paddingHorizontal: 20,
-    display: 'flex',
-    flexDirection: 'row',
-    backgroundColor: '#999'
-  },
-  obsList: {
-    borderWidth: 1,
-    borderTopWidth: 0,
-    borderColor: '#aaa',
-    paddingVertical: 10,
-    paddingHorizontal: 20
-  },
-  container: {
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'center'
-  },
-  text: {
-    fontSize: 18,
-    fontWeight: 'bold',
-  }
-});
-
-ProfilePage.propTypes = {
+ProfileScreen.propTypes = {
   navigation: PropTypes.object,
-}
+};
