@@ -1,21 +1,24 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, TouchableHighlight } from 'react-native';
 import PropTypes from 'prop-types';
 import styles from './style';
 
 const ObservationListItem = props => (
-  <View
-    style={styles.flex}
+  <TouchableHighlight
+    onPress={() => props.goTo(props.observation.collision.species)}
+    underlayColor={'#ccc'}
   >
-    <View style={styles.thumbnail}></View>
-    <View style={styles.details}>
-      <Text
-        style={styles.species}
-        onPress={() => props.goTo(props.observation.collision.species)}
-      >{props.observation.collision.species.name}</Text>
-      <Text style={styles.location}>{props.observation.place.name}</Text>
+    <View style={styles.flex}>
+      <View style={styles.thumbnail}></View>
+
+      <View style={styles.details}>
+        <Text
+          style={styles.species}
+        >{props.observation.collision.species.name}</Text>
+        <Text style={styles.location}>{props.observation.place.name}</Text>
+      </View>
     </View>
-  </View>
+  </TouchableHighlight>
 );
 
 export default ObservationListItem;
@@ -31,4 +34,5 @@ ObservationListItem.propTypes = {
       name: PropTypes.string
     })
   }),
+  goTo: PropTypes.func,
 };

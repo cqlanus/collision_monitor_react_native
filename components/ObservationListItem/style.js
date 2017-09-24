@@ -1,4 +1,5 @@
 import { StyleSheet } from 'react-native';
+import {LIGHT_GREY, MEDIUM_GREY} from '../../styles/common';
 
 const styles = StyleSheet.create({
   flex: {
@@ -6,13 +7,13 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'flex-start',
     alignItems: 'center',
-    borderColor: '#ddd',
+    borderColor: LIGHT_GREY,
     borderBottomWidth: 1
   },
   thumbnail: {
     height: 50,
     width: 50,
-    backgroundColor: '#999',
+    backgroundColor: MEDIUM_GREY,
     margin: 5
   },
   details: {
@@ -24,7 +25,7 @@ const styles = StyleSheet.create({
   },
   location: {
     fontSize: 17,
-    color: '#999'
+    color: MEDIUM_GREY
   }
 });
 

@@ -7,8 +7,9 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 import Login from '../components/LoginScreen';
 import ProfileScreen from '../components/ProfileScreen';
 import MapScreen from '../components/MapScreen';
-
 import ObservationScreen from '../components/ObservationScreen';
+
+import {PRIMARY_COLOR} from '../styles/common';
 
 export const ProfileStack = StackNavigator({
   Profile: {
@@ -49,6 +50,6 @@ export const Tabs = TabNavigator({
   },
 }, {
   tabBarOptions: {
-    activeTintColor: '#e91e63',
+    activeTintColor: PRIMARY_COLOR,
   }
 });

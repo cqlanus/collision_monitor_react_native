@@ -1,4 +1,5 @@
 import {StyleSheet} from 'react-native';
+import {MEDIUM_GREY} from '../../styles/common';
 
 const styles = StyleSheet.create({
   scroll: {
@@ -6,18 +7,13 @@ const styles = StyleSheet.create({
     paddingTop: 0,
   },
   profileInfo: {
-    borderWidth: 1,
-    borderColor: '#aaa',
     paddingVertical: 10,
     paddingHorizontal: 20,
     display: 'flex',
     flexDirection: 'row',
-    backgroundColor: '#999'
+    backgroundColor: MEDIUM_GREY,
   },
   obsList: {
-    borderWidth: 1,
-    borderTopWidth: 0,
-    borderColor: '#aaa',
     paddingVertical: 10,
     paddingHorizontal: 20
   },

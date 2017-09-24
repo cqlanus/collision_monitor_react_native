@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { Text, View, TextInput, ScrollView } from 'react-native';
-import styles from 'style';
-import Container from './Container';
-import Button from './Button';
-import Label from './Label';
+import styles from './style';
+import Container from '../Container';
+import Button from '../Button';
+import Label from '../Label';
 
 import Icon from 'react-native-vector-icons/FontAwesome';
 

@@ -5,6 +5,10 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
     paddingTop: 20,
   },
+  map: {
+    height: 400,
+    width: '100%'
+  }
 });
 
 export default styles;

@@ -3,10 +3,10 @@ import { View, ScrollView } from 'react-native';
 import PropTypes from 'prop-types';
 import styles from './style';
 
-// import Container from './Container';
-import ProfileInfo from './ProfileInfo';
-import ObservationList from './ObservationList';
-// import Header from './Header';
+// import Container from '../Container';
+import ProfileInfo from '../ProfileInfo';
+import ObservationList from '../ObservationList';
+// import Header from '../Header';
 
 import axios from 'axios';
 

@@ -1,4 +1,5 @@
 import {StyleSheet} from 'react-native';
+import {DARK_GREY} from '../../styles/common';
 
 const stylesObj = StyleSheet.create({
   thumbnail: {
@@ -7,7 +8,7 @@ const stylesObj = StyleSheet.create({
     borderWidth: 4,
     height: 100,
     width: 100,
-    backgroundColor: '#444'
+    backgroundColor: DARK_GREY
   },
   observations: {
     paddingLeft: 30,

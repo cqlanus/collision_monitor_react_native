@@ -1,6 +1,6 @@
 import React from 'react';
 import { View } from 'react-native';
-import ObservationListItem from './ObservationListItem';
+import ObservationListItem from '../ObservationListItem';
 import PropTypes from 'prop-types';
 
 const ObservationList = props => (

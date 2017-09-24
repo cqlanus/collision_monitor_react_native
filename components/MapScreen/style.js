@@ -4,10 +4,12 @@ const styles = StyleSheet.create({
   container: {
     display: 'flex',
     flexDirection: 'row',
-    justifyContent: 'center'
+    justifyContent: 'center',
+    paddingTop: 30,
+    paddingBottom: 10,
   },
   text: {
-    fontSize: 18,
+    fontSize: 15,
     fontWeight: 'bold',
   },
   scroll: {
